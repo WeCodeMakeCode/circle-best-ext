@@ -1,7 +1,5 @@
 //% weight=100 color=#008080 
-//% groups=[ "Create", "Properties",  "Actions, "List"]
 namespace circle{
-    //% group="Create" 
     //% blockSetVariable=myCircleSprite
     //% block="create circle of radius %radius color %color || fill-color %fillColor"
     //% radius.min=5 radius.max=60 radius.defl=30
@@ -37,38 +35,32 @@ namespace circle{
             circleImage.fillCircle(centerX, centerY,  radius, fillColor)
         }
     }
-    //% group="Properties" 
     //% blockSetVariable="circle color"
     //% block="%circle=variables_get(myCircleSprite) color"
     export function getColor(circle:Sprite): number {
         return sprites.readDataNumber(circle, "color")
     }
-    //% group="Properties"  
     //% block="set %circle=variables_get(myCircleSprite) color to %color"
     export function setColor(circle: Sprite, color: number) {
         sprites.setDataNumber(circle, "color", color)
         makeCircle(circle)
     }
-    //% group="Properties" 
     //% blockSetVariable="circle radius"
     //% block="%circle=variables_get(myCircleSprite) radius"
     export function getRadius(circle: Sprite): number {
         return sprites.readDataNumber(circle, "radius")
     }
-    //% group="Actions" 
     //% block="erase fill from %circle=variables_get(myCircleSprite)"
     export function unfill(circle: Sprite) {
         sprites.setDataNumber(circle, "fillColor", 0)
         makeCircle(circle)
     }
-    //% group="Properties" 
     //% blockSetVariable="circle fill color"
     //% block="%circle=variables_get(myCircleSprite) fill color"
     export function getFillColor(circle:Sprite) {
         return sprites.readDataNumber(circle, "fillColor")
     }
 
-    //% group="Actions" 
     //% block="fill %Circle=variables_get(myCircleSprite) with color $color"
     export function setFill(circle: Sprite, fillColor: number =  0){
         sprites.setDataNumber(circle, "fillColor", fillColor)
