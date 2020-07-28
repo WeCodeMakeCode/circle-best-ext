@@ -9,7 +9,7 @@ namespace circle{
     export function getFillColor(circle:Sprite) {
         return sprites.readDataNumber(circle, "fillColor")
     }
-    //% block="fill %Circle=variables_get(myCircleSprite) with color $color"
+    //% block="fill %Circle=variables_get(myCircleSprite) with color $fillColor"
     export function setFill(circle: Sprite, fillColor: number =  0){
         sprites.setDataNumber(circle, "fillColor", fillColor)
         makeCircle(circle)
