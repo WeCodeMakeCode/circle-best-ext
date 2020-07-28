@@ -39,36 +39,37 @@ namespace circle{
     }
     //% group="Properties" 
     //% blockSetVariable="circle color"
-    //% block="get %circle(myCircleSprite) color"
+    //% block="%circle=variables_get(myCircleSprite) color"
     export function getColor(circle:Sprite): number {
         return sprites.readDataNumber(circle, "color")
     }
     //% group="Properties"  
-    //% block="set %circle(myCircleSprite) color to %color"
+    //% block="set %circle=variables_get(myCircleSprite) color to %color"
     export function setColor(circle: Sprite, color: number) {
         sprites.setDataNumber(circle, "color", color)
         makeCircle(circle)
     }
     //% group="Properties" 
     //% blockSetVariable="circle radius"
-    //% block="get %circle(myCircleSprite) radius"
+    //% block="%circle=variables_get(myCircleSprite) radius"
     export function getRadius(circle: Sprite): number {
         return sprites.readDataNumber(circle, "radius")
     }
-    //% group="Properties" 
-    //% blockSetVariable="circle fill color"
-    //% block="get %circle(myCircleSprite) fill color"
-    export function getFillColor(circle:Sprite) {
-        return sprites.readDataNumber(circle, "fillColor")
-    }
     //% group="Actions" 
-    //% block="erase fill from %circle(myCircleSprite)"
+    //% block="erase fill from %circle=variables_get(myCircleSprite)"
     export function unfill(circle: Sprite) {
         sprites.setDataNumber(circle, "fillColor", 0)
         makeCircle(circle)
     }
+    //% group="Properties" 
+    //% blockSetVariable="circle fill color"
+    //% block="%circle=variables_get(myCircleSprite) fill color"
+    export function getFillColor(circle:Sprite) {
+        return sprites.readDataNumber(circle, "fillColor")
+    }
+
     //% group="Actions" 
-    //% block="fill %Circle(myCircleSprite) || with color $color"
+    //% block="fill %Circle=variables_get(myCircleSprite) with color $color"
     export function setFill(circle: Sprite, fillColor: number =  0){
         sprites.setDataNumber(circle, "fillColor", fillColor)
         makeCircle(circle)
