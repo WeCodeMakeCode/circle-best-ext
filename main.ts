@@ -42,6 +42,7 @@ namespace circle{
     //% block="fill %c=variables_get(myCircleSprite) with color $fillColor"
     //% fillColor.min=0 fillColor.max=15 fillColor.defl=2
     export function setFill(c: Sprite, fillColor: number =  0){
+        sprites.setDataNumber(c, "color", 0) // because a few pixels show after fill
         sprites.setDataNumber(c, "fillColor", fillColor % 16)
         makeCircle(c)
     }
