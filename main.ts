@@ -5,10 +5,10 @@ namespace circle{
     export function colorIndexPicker(color:number){
         return color
     }
-    //% block=" random color excluding %n colors: || %c1,  %c2"
+    //% block=" random color excluding %n colors: || %c1 %c2"
     //% n.min=0 n.max=2 n.defl=0
     //% c1.min=0 c1.max=15 c1.defl=0
-    //5 c2.min=0 c2.max=15 c2.defl=15
+    //% c2.min=0 c2.max=15 c2.defl=15
     export function randomColor(n:number = 0, c1:number = 0, c2: number = 15): number{
         switch(n) { 
             case 0: {    
@@ -40,6 +40,7 @@ namespace circle{
         return sprites.readDataNumber(c, "fillColor")
     }
     //% block="fill %c=variables_get(myCircleSprite) with color $fillColor"
+    //% fillColor.min=0 fillColor.max=15 fillColor.defl=2
     export function setFill(c: Sprite, fillColor: number =  0){
         sprites.setDataNumber(c, "fillColor", fillColor % 16)
         makeCircle(c)
@@ -49,6 +50,7 @@ namespace circle{
         return sprites.readDataNumber(c, "color")
     }
     //% block="set %c=variables_get(myCircleSprite) color to %color"
+    //% color.min=0 color.max=15 color.defl=2
     export function setColor(c: Sprite, color: number) {
         sprites.setDataNumber(c, "color", color % 16)
         makeCircle(c)
@@ -60,8 +62,8 @@ namespace circle{
     //% blockSetVariable=myCircleSprite
     //% block="create circle of radius %radius color %color || fill-color %fillColor"
     //% radius.min=5 radius.max=60 radius.defl=30
-    //% color.defl=2
-    //% fillColor.defl=0
+    //% color.min=0 color.max=15 color.defl=2
+    //% fillColor.min=0 fillColor.max=15 fillColor.defl=0
     export function createCircle(radius: number, color: number , fillColor:number = 0 ): Sprite {
         let circleImage = image.create(2 * radius + 2, 2 * radius  + 2);   
         let centerX = radius + 1
