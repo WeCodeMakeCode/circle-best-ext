@@ -32,20 +32,11 @@ namespace circle{
     }
     //% block="erase fill from %c=variables_get(myCircleSprite)"
     export function unfill(c: Sprite) {
-        sprites.setDataNumber(c, "fillColor", -1)
-        makeCircle(c)
+        makeCircle(c, false)
     }
-    //% block="%c=variables_get(myCircleSprite) fill color"
-    export function getFillColor(c:Sprite) {
-        return sprites.readDataNumber(c, "fillColor")
-    }
-    //% block="fill %c=variables_get(myCircleSprite) with color $fillColor"
-    //% fillColor.min=0 fillColor.max=15 fillColor.defl=2
-    export function setFill(c: Sprite, fillColor: number =  0){
-        sprites.setDataNumber(c, "color", 0) // because a few pixels show after fill
-        makeCircle(c)
-        sprites.setDataNumber(c, "fillColor", fillColor % 16)
-        makeCircle(c)
+    //% block="fill %c=variables_get(myCircleSprite)"
+    export function fill(c: Sprite){
+        makeCircle(c, true)
     }
     //% block="%c=variables_get(myCircleSprite) color"
     export function getColor(c:Sprite): number {
@@ -55,7 +46,7 @@ namespace circle{
     //% color.min=0 color.max=15 color.defl=2
     export function setColor(c: Sprite, color: number) {
         sprites.setDataNumber(c, "color", color % 16)
-        makeCircle(c)
+        makeCircle(c, false)
     }
     //% block="%c=variables_get(myCircleSprite) radius"
     export function getRadius(c: Sprite): number {
@@ -65,8 +56,8 @@ namespace circle{
     //% block="create circle of radius %radius color %color || fill-color %fillColor"
     //% radius.min=5 radius.max=60 radius.defl=30
     //% color.min=0 color.max=15 color.defl=2
-    //% fillColor.min=0 fillColor.max=15 fillColor.defl=0
-    export function createCircle(radius: number, color: number , fillColor:number = 0 ): Sprite {
+    //% fill.defl=false
+    export function createCircle(radius: number, color: number , fill:boolean = false ): Sprite {
         let circleImage = image.create(2 * radius + 2, 2 * radius  + 2);   
         let centerX = radius + 1
         let centerY = radius + 1
@@ -75,37 +66,20 @@ namespace circle{
         sprites.setDataNumber(c, "centerX", centerX)
         sprites.setDataNumber(c, "centerY", centerY)
         sprites.setDataNumber(c, "color", color % 16)
-        sprites.setDataNumber(c, "fillColor", fillColor % 16)
-        makeCircle(c)
+        makeCircle(c, fill)
         return c
     }
-    function makeCircle(c:Sprite){
+    function makeCircle(c:Sprite, fill:boolean = false){
         let radius = sprites.readDataNumber(c,"radius")
         let color = sprites.readDataNumber(c,"color")
         let centerX = sprites.readDataNumber(c,"centerX")
         let centerY = sprites.readDataNumber(c,"centerY")
-        let fillColor = sprites.readDataNumber(c,"fillColor")
-        switch(fillColor){
-            case 0: {
-                c.image.drawCircle(centerX, centerY, radius, color)
-                break;
-            }
-            case -1: {
-                c.image.fillCircle(centerX, centerY,  radius, 0)
-                sprites.setDataNumber(c,"fillNumber" , 0)
-                break;
-            }
-            default: {
-                c.image.fillCircle(centerX, centerY,  radius, fillColor)
-                break;
-            }
+        if (fill){
+            c.image.fillCircle(centerX, centerY,  radius, color)
+        } else{
+            c.image.fillCircle(centerX, centerY,  radius, 0)
         }
-        if (fillColor == 0)
-        {
-            
-        } else {
-            
-        }
+        c.image.drawCircle(centerX, centerY, radius, color)
     }
 }
 
@@ -122,7 +96,6 @@ namespace sprites {
         const d = sprite.data;
         d[name] = value;
     }
-
     /**
      * Change a number in the data of a sprite by a given value
      */
