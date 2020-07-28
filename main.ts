@@ -72,12 +72,11 @@ namespace circle{
         let centerX = sprites.readDataNumber(circle,"centerX")
         let centerY = sprites.readDataNumber(circle,"centerY")
         let fillColor = sprites.readDataNumber(circle,"fillColor")
-        let circleImage = circle.image
         if (fillColor == 0)
         {
-            circleImage.drawCircle(centerX, centerY, radius, color)
+            circle.image.drawCircle(centerX, centerY, radius, color)
         } else {
-            circleImage.fillCircle(centerX, centerY,  radius, fillColor)
+            circle.image.fillCircle(centerX, centerY,  radius, fillColor)
         }
     }
 }
