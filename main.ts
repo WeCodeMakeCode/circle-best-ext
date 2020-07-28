@@ -37,7 +37,6 @@ namespace circle{
     //% blockSetVariable=myCircleSprite
     //% block="create circle of radius %radius color %color || fill-color %fillColor"
     //% radius.min=5 radius.max=60 radius.defl=30
-    //  color.shadow="colorindexpicker"
     //  color.shadow="colorWheelHsvPicker"
     //  fillColor.shadow="colorWheelHsvPicker"
     export function createCircle(radius: number, color: number , fillColor:number = 0 ): Sprite {
