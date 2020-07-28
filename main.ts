@@ -32,7 +32,7 @@ namespace circle{
     }
     //% block="erase fill from %c=variables_get(myCircleSprite)"
     export function unfill(c: Sprite) {
-        sprites.setDataNumber(c, "fillColor", 0)
+        sprites.setDataNumber(c, "fillColor", -1)
         makeCircle(c)
     }
     //% block="%c=variables_get(myCircleSprite) fill color"
@@ -85,11 +85,26 @@ namespace circle{
         let centerX = sprites.readDataNumber(c,"centerX")
         let centerY = sprites.readDataNumber(c,"centerY")
         let fillColor = sprites.readDataNumber(c,"fillColor")
+        switch(fillColor){
+            case 0: {
+                c.image.drawCircle(centerX, centerY, radius, color)
+                break;
+            }
+            case -1: {
+                c.image.fillCircle(centerX, centerY,  radius, 0)
+                sprites.setDataNumber(c,"fillNumber" , 0)
+                break;
+            }
+            default: {
+                c.image.fillCircle(centerX, centerY,  radius, fillColor)
+                break;
+            }
+        }
         if (fillColor == 0)
         {
-            c.image.drawCircle(centerX, centerY, radius, color)
+            
         } else {
-            c.image.fillCircle(centerX, centerY,  radius, fillColor)
+            
         }
     }
 }
