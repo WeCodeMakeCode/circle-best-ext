@@ -11,10 +11,10 @@ namespace circle{
     export function pickColorNumber(color:number){
         return color
     }
-    //% block=" random color: ||  exclude color1? %one, exclude color2? %two"
+    //% block=" random color: ||  exclude %one, exclude %two"
     //% one.shadow="colorNumberPicker"
     //% two.shadow="colorNumberPicker"
-    export function randomColor(one:number = -1, twp: number = -1){
+    export function randomColor(one:number = null, twp: number = null): number{
         return randint(1, 15)
     }
     //% block="erase fill from %circle=variables_get(myCircleSprite)"
