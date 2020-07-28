@@ -38,7 +38,9 @@ namespace circle{
     //% block="create circle of radius %radius color %color || fill-color %fillColor"
     //% radius.min=5 radius.max=60 radius.defl=30
     //% color.shadow="colorWheelHsvPicker"
+    //% color.defl=2
     //% fillColor.shadow="colorWheelHsvPicker"
+    //% fillColor.defl=0
     export function createCircle(radius: number, color: number , fillColor:number = 0 ): Sprite {
         let circleImage = image.create(2 * radius + 2, 2 * radius  + 2);   
         let centerX = radius + 1
