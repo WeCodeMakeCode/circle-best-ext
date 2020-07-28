@@ -16,6 +16,7 @@ namespace circle{
     }
     //% block="fill %Circle=variables_get(myCircleSprite) with color $fillColor"
     //% fillColor.shadow="colorWheelHsvPicker"
+    //% fillColor.min=0 fillColor.max=15 fillColor.defl=0
     export function setFill(circle: Sprite, fillColor: number =  0){
         sprites.setDataNumber(circle, "fillColor", fillColor)
         makeCircle(circle)
