@@ -5,12 +5,12 @@ namespace circle{
     export function colorIndexPicker(color:number){
         return color
     }
-    //% block=" random color -- exclude %n colors: || %c1,  %c2"
+    //% block=" random color excluding %n colors: || %c1,  %c2"
     //% n.min=0 n.max=2 n.defl=0
-    //% c1.defl=0
-    //5 c2.defl=15
     //% c1.shadow="colorindexpicker"
     //% c2.shadow="colorindexpicker"
+    //% c1.defl=0
+    //5 c2.defl=15
     export function randomColor(n:number = 0, c1:number = 0, c2: number = 15): number{
         switch(n) { 
             case 0: {    
