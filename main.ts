@@ -1,7 +1,7 @@
 //% weight=100 color=#008080 
 namespace circle{
     //% block="color"
-    //% color.shadow="colorNumberPicker"
+    //% color.shadow="colorWheelHsvPicker"
     export function pickColor(color:number){
         return color
     }
@@ -15,7 +15,7 @@ namespace circle{
         return sprites.readDataNumber(circle, "fillColor")
     }
     //% block="fill %Circle=variables_get(myCircleSprite) with color $fillColor"
-    //% fillColor.shadow="colorNumberPicker"
+    //% fillColor.shadow="colorWheelHsvPicker"
     export function setFill(circle: Sprite, fillColor: number =  0){
         sprites.setDataNumber(circle, "fillColor", fillColor)
         makeCircle(circle)
@@ -25,7 +25,7 @@ namespace circle{
         return sprites.readDataNumber(circle, "color")
     }
     //% block="set %circle=variables_get(myCircleSprite) color to %color"
-    //% color.shadow="colorNumberPicker"
+    //% color.shadow="colorWheelHsvPicker"
     export function setColor(circle: Sprite, color: number) {
         sprites.setDataNumber(circle, "color", color)
         makeCircle(circle)
