@@ -1,14 +1,21 @@
 //% weight=100 color=#008080 
 namespace circle{
+
+    //% block="color %color"
+    //% color.shadow="colorWheelHsvPicker"
+    export function colorWheelHsvPicker(color:number){
+        return color
+    }
     //% block="color %color"
     //% color.shadow="colorNumberPicker"
     export function pickColorNumber(color:number){
         return color
     }
-    //% block="color %color"
-    //% color.shadow="colorWheelHsvPicker"
-    export function colorWheelHsvPicker(color:number){
-        return color
+    //% block=" random color || include include clear? %clear" include black? %black
+    //% clear.shadow="toggleYesNo"
+    //% black.shadow="toggleYesNo"
+    export function randomColor(clear: boolean = false, black: boolean = false){
+        return randint(1, 15)
     }
     //% block="erase fill from %circle=variables_get(myCircleSprite)"
     export function unfill(circle: Sprite) {
