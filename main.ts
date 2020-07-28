@@ -40,8 +40,8 @@ namespace circle{
     //% color.min=0 color.max=15 color.defl=2
     //  color.shadow="colorindexpicker"
     //% fillColor.min=0 fillColor.max=15 fillColor.defl=0
-    //  color.shadow="colorindexpicker"
-    //  fillColor.shadow="colorindexpicker"
+    //  color.shadow="colorWheelHsvPicker"
+    //  fillColor.shadow="colorWheelHsvPicker"
     export function createCircle(radius: number, color: number , fillColor:number = 0 ): Sprite {
         let circleImage = image.create(2 * radius + 2, 2 * radius  + 2);   
         let centerX = radius + 1
