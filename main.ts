@@ -29,7 +29,7 @@ namespace circle{
     //% block="fill %c=variables_get(myCircleSprite) with color $fillColor"
     //% fillColor.shadow="colorWheelHsvPicker"
     export function setFill(c: Sprite, fillColor: number =  0){
-        sprites.setDataNumber(c, "fillColor", fillColor)
+        sprites.setDataNumber(c, "fillColor", fillColor % 16)
         makeCircle(c)
     }
     //% block="%c=variables_get(myCircleSprite) color"
@@ -39,7 +39,7 @@ namespace circle{
     //% block="set %c=variables_get(myCircleSprite) color to %color"
     //% color.shadow="colorWheelHsvPicker"
     export function setColor(c: Sprite, color: number) {
-        sprites.setDataNumber(c, "color", color)
+        sprites.setDataNumber(c, "color", color % 16)
         makeCircle(c)
     }
     //% block="%c=variables_get(myCircleSprite) radius"
@@ -61,8 +61,8 @@ namespace circle{
         sprites.setDataNumber(c, "radius", radius)
         sprites.setDataNumber(c, "centerX", centerX)
         sprites.setDataNumber(c, "centerY", centerY)
-        sprites.setDataNumber(c, "color", color)
-        sprites.setDataNumber(c, "fillColor", fillColor)
+        sprites.setDataNumber(c, "color", color % 16)
+        sprites.setDataNumber(c, "fillColor", fillColor % 16)
         makeCircle(c)
         return c
     }
