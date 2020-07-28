@@ -1,6 +1,6 @@
 //% weight=100 color=#008080 
 namespace circle{
-    //% block="%color"
+    //% block="color %color"
     //% color.shadow="colorWheelHsvPicker"
     export function pickColor(color:number){
         return color
