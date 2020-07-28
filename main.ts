@@ -23,7 +23,6 @@ namespace circle{
         sprites.setDataNumber(circle, "color", color)
         makeCircle(circle)
     }
-    //% blockSetVariable="circle radius"
     //% block="%circle=variables_get(myCircleSprite) radius"
     export function getRadius(circle: Sprite): number {
         return sprites.readDataNumber(circle, "radius")
