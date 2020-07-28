@@ -5,18 +5,15 @@ namespace circle{
         sprites.setDataNumber(circle, "fillColor", 0)
         makeCircle(circle)
     }
-    //% blockSetVariable="circle fill color"
     //% block="%circle=variables_get(myCircleSprite) fill color"
     export function getFillColor(circle:Sprite) {
         return sprites.readDataNumber(circle, "fillColor")
     }
-
     //% block="fill %Circle=variables_get(myCircleSprite) with color $color"
     export function setFill(circle: Sprite, fillColor: number =  0){
         sprites.setDataNumber(circle, "fillColor", fillColor)
         makeCircle(circle)
     }
-    //% blockSetVariable="circle color"
     //% block="%circle=variables_get(myCircleSprite) color"
     export function getColor(circle:Sprite): number {
         return sprites.readDataNumber(circle, "color")
