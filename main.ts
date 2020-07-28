@@ -1,8 +1,13 @@
 //% weight=100 color=#008080 
 namespace circle{
     //% block="color %color"
+    //% color.shadow="colorNumberPicker"
+    export function pickColorNumber(color:number){
+        return color
+    }
+    //% block="color %color"
     //% color.shadow="colorWheelHsvPicker"
-    export function pickColor(color:number){
+    export function colorWheelHsvPicker(color:number){
         return color
     }
     //% block="erase fill from %circle=variables_get(myCircleSprite)"
