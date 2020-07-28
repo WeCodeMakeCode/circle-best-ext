@@ -17,34 +17,34 @@ namespace circle{
     export function randomColor(one:number = null, twp: number = null): number{
         return randint(1, 15)
     }
-    //% block="erase fill from %circle=variables_get(myCircleSprite)"
-    export function unfill(circle: Sprite) {
-        sprites.setDataNumber(circle, "fillColor", 0)
-        makeCircle(circle)
+    //% block="erase fill from %c=variables_get(myCircleSprite)"
+    export function unfill(c: Sprite) {
+        sprites.setDataNumber(c, "fillColor", 0)
+        makeCircle(c)
     }
-    //% block="%circle=variables_get(myCircleSprite) fill color"
-    export function getFillColor(circle:Sprite) {
-        return sprites.readDataNumber(circle, "fillColor")
+    //% block="%c=variables_get(myCircleSprite) fill color"
+    export function getFillColor(c:Sprite) {
+        return sprites.readDataNumber(c, "fillColor")
     }
-    //% block="fill %Circle=variables_get(myCircleSprite) with color $fillColor"
+    //% block="fill %c=variables_get(myCircleSprite) with color $fillColor"
     //% fillColor.shadow="colorWheelHsvPicker"
-    export function setFill(circle: Sprite, fillColor: number =  0){
-        sprites.setDataNumber(circle, "fillColor", fillColor)
-        makeCircle(circle)
+    export function setFill(c: Sprite, fillColor: number =  0){
+        sprites.setDataNumber(c, "fillColor", fillColor)
+        makeCircle(c)
     }
-    //% block="%circle=variables_get(myCircleSprite) color"
-    export function getColor(circle:Sprite): number {
-        return sprites.readDataNumber(circle, "color")
+    //% block="%c=variables_get(myCircleSprite) color"
+    export function getColor(c:Sprite): number {
+        return sprites.readDataNumber(c, "color")
     }
-    //% block="set %circle=variables_get(myCircleSprite) color to %color"
+    //% block="set %c=variables_get(myCircleSprite) color to %color"
     //% color.shadow="colorWheelHsvPicker"
-    export function setColor(circle: Sprite, color: number) {
-        sprites.setDataNumber(circle, "color", color)
-        makeCircle(circle)
+    export function setColor(c: Sprite, color: number) {
+        sprites.setDataNumber(c, "color", color)
+        makeCircle(c)
     }
-    //% block="%circle=variables_get(myCircleSprite) radius"
-    export function getRadius(circle: Sprite): number {
-        return sprites.readDataNumber(circle, "radius")
+    //% block="%c=variables_get(myCircleSprite) radius"
+    export function getRadius(c: Sprite): number {
+        return sprites.readDataNumber(c, "radius")
     }
     //% blockSetVariable=myCircleSprite
     //% block="create circle of radius %radius color %color || fill-color %fillColor"
@@ -57,26 +57,26 @@ namespace circle{
         let circleImage = image.create(2 * radius + 2, 2 * radius  + 2);   
         let centerX = radius + 1
         let centerY = radius + 1
-        let circle = sprites.create(circleImage)
-        sprites.setDataNumber(circle, "radius", radius)
-        sprites.setDataNumber(circle, "centerX", centerX)
-        sprites.setDataNumber(circle, "centerY", centerY)
-        sprites.setDataNumber(circle, "color", color)
-        sprites.setDataNumber(circle, "fillColor", fillColor)
-        makeCircle(circle)
-        return circle
+        let c = sprites.create(circleImage)
+        sprites.setDataNumber(c, "radius", radius)
+        sprites.setDataNumber(c, "centerX", centerX)
+        sprites.setDataNumber(c, "centerY", centerY)
+        sprites.setDataNumber(c, "color", color)
+        sprites.setDataNumber(c, "fillColor", fillColor)
+        makeCircle(c)
+        return c
     }
-    function makeCircle(circle:Sprite){
-        let radius = sprites.readDataNumber(circle,"radius")
-        let color = sprites.readDataNumber(circle,"color")
-        let centerX = sprites.readDataNumber(circle,"centerX")
-        let centerY = sprites.readDataNumber(circle,"centerY")
-        let fillColor = sprites.readDataNumber(circle,"fillColor")
+    function makeCircle(c:Sprite){
+        let radius = sprites.readDataNumber(c,"radius")
+        let color = sprites.readDataNumber(c,"color")
+        let centerX = sprites.readDataNumber(c,"centerX")
+        let centerY = sprites.readDataNumber(c,"centerY")
+        let fillColor = sprites.readDataNumber(c,"fillColor")
         if (fillColor == 0)
         {
-            circle.image.drawCircle(centerX, centerY, radius, color)
+            c.image.drawCircle(centerX, centerY, radius, color)
         } else {
-            circle.image.fillCircle(centerX, centerY,  radius, fillColor)
+            c.image.fillCircle(centerX, centerY,  radius, fillColor)
         }
     }
 }
