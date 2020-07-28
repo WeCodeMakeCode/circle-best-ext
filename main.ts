@@ -7,13 +7,13 @@ namespace circle{
         return color
     }
     //% block="color %color"
-    //% color.shadow="colorNumberPicker"
+    //% color.shadow="colorindexpicker"
     export function pickColorNumber(color:number){
         return color
     }
     //% block=" random color: ||  exclude %one, exclude %two"
-    //% one.shadow="colorNumberPicker"
-    //% two.shadow="colorNumberPicker"
+    //% one.shadow="colorindexpicker"
+    //% two.shadow="colorindexpicker"
     export function randomColor(one:number = null, twp: number = null): number{
         return randint(1, 15)
     }
@@ -27,7 +27,7 @@ namespace circle{
         return sprites.readDataNumber(c, "fillColor")
     }
     //% block="fill %c=variables_get(myCircleSprite) with color $fillColor"
-    //% fillColor.shadow="colorWheelHsvPicker"
+    //% fillColor.shadow="colorindexpicker"
     export function setFill(c: Sprite, fillColor: number =  0){
         sprites.setDataNumber(c, "fillColor", fillColor % 16)
         makeCircle(c)
@@ -37,7 +37,7 @@ namespace circle{
         return sprites.readDataNumber(c, "color")
     }
     //% block="set %c=variables_get(myCircleSprite) color to %color"
-    //% color.shadow="colorWheelHsvPicker"
+    //% color.shadow="colorindexpicker"
     export function setColor(c: Sprite, color: number) {
         sprites.setDataNumber(c, "color", color % 16)
         makeCircle(c)
@@ -49,9 +49,9 @@ namespace circle{
     //% blockSetVariable=myCircleSprite
     //% block="create circle of radius %radius color %color || fill-color %fillColor"
     //% radius.min=5 radius.max=60 radius.defl=30
-    //% color.shadow="colorWheelHsvPicker"
+    //% color.shadow="colorindexpicker"
     //% color.defl=2
-    //% fillColor.shadow="colorWheelHsvPicker"
+    //% fillColor.shadow="colorindexpicker"
     //% fillColor.defl=0
     export function createCircle(radius: number, color: number , fillColor:number = 0 ): Sprite {
         let circleImage = image.create(2 * radius + 2, 2 * radius  + 2);   
