@@ -6,18 +6,25 @@ namespace circle{
         return color
     }
     //% block=" random color excluding %n colors: || %c1 %c2"
-    //% n.min=0 n.max=2 n.defl=0
+    //% n.min=0 n.max=2 n.defl=2
     //% c1.min=0 c1.max=15 c1.defl=0
     //% c2.min=0 c2.max=15 c2.defl=15
-    export function randomColor(n:number = 0, c1:number = 0, c2: number = 15): number{
+    //% c3.min=0 c3.max=15 c3.defl=0
+    export function randomColor(n:number = 2, c1:number = 0, c2: number = 15, c3:number = 0): number{
         switch(n) { 
             case 0: {    
                 c1 = -1
                 c2 = -1
+                c3 = -1
                 break; 
             }
             case 1: { 
                 c2 = -1
+                c3 = -1
+                break; 
+            } 
+            case 2: { 
+                c3 = -1
                 break; 
             } 
             default: { 
@@ -25,7 +32,7 @@ namespace circle{
             } 
         } 
         let clr = randint(0, 15)
-        while(clr == c1 || clr == c2) { // c1 or c2 = -1 will not be color
+        while(clr == c1 || clr == c2 || clr == c3) { // c1 or c2 or c3 = -1 will not be color
             let clr = randint(0, 15)
         }
         return clr
