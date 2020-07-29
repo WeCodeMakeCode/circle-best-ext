@@ -32,21 +32,23 @@ namespace circle{
     }
     //% block="erase fill from %c=variables_get(myCircleSprite)"
     export function unfill(c: Sprite) {
-        makeCircle(c, false)
+        sprites.setDataBoolean(c, "filled", false)
+        makeCircle(c)
     }
     //% block="fill %c=variables_get(myCircleSprite)"
     export function fill(c: Sprite){
-        makeCircle(c, true)
+        sprites.setDataBoolean(c, "filled", true)
+        makeCircle(c)
     }
     //% block="%c=variables_get(myCircleSprite) color"
     export function getColor(c:Sprite): number {
         return sprites.readDataNumber(c, "color")
     }
-    //% block="set %c=variables_get(myCircleSprite) color to %color"
+    //% block="draw circle for %c=variables_get(myCircleSprite) with color to %color"
     //% color.min=0 color.max=15 color.defl=2
     export function setColor(c: Sprite, color: number) {
         sprites.setDataNumber(c, "color", color % 16)
-        makeCircle(c, false)
+        makeCircle(c)
     }
     //% block="%c=variables_get(myCircleSprite) radius"
     export function getRadius(c: Sprite): number {
@@ -66,14 +68,16 @@ namespace circle{
         sprites.setDataNumber(c, "centerX", centerX)
         sprites.setDataNumber(c, "centerY", centerY)
         sprites.setDataNumber(c, "color", color % 16)
-        makeCircle(c, filled)
+        sprites.setDataBoolean(c, "filled", filled)
+        makeCircle(c)
         return c
     }
-    function makeCircle(c:Sprite, filled:boolean = false){
-        let radius = sprites.readDataNumber(c,"radius")
-        let color = sprites.readDataNumber(c,"color")
-        let centerX = sprites.readDataNumber(c,"centerX")
-        let centerY = sprites.readDataNumber(c,"centerY")
+    function makeCircle(c:Sprite){
+        let radius: number = sprites.readDataNumber(c,"radius")
+        let color: number = sprites.readDataNumber(c,"color")
+        let centerX: number = sprites.readDataNumber(c,"centerX")
+        let centerY: number = sprites.readDataNumber(c,"centerY")
+        let filled: boolean = sprites.readDataBoolean(c,"filled")
         if (filled){
             c.image.fillCircle(centerX, centerY,  radius, color)
         } else{
