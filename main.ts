@@ -33,7 +33,8 @@ namespace circle{
             } 
         } 
         let clr = randint(0, 15)
-        while(clr == c1 || clr == c2 || clr == c3) { // c1 or c2 or c3 = -1 will not be color
+        // c1 or c2 or c3 = -1 will not be color
+        while(clr == c1 || clr == c2 || clr == c3) { 
             let clr = randint(0, 15)
         }
         return clr
