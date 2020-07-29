@@ -44,7 +44,7 @@ namespace circle{
     export function getColor(c:Sprite): number {
         return sprites.readDataNumber(c, "color")
     }
-    //% block="draw circle for %c=variables_get(myCircleSprite) with color to %color"
+    //% block="set %c=variables_get(myCircleSprite) color to %color"
     //% color.min=0 color.max=15 color.defl=2
     export function setColor(c: Sprite, color: number) {
         sprites.setDataNumber(c, "color", color % 16)
