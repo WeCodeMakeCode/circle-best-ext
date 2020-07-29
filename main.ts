@@ -40,6 +40,10 @@ namespace circle{
         sprites.setDataBoolean(c, "filled", true)
         makeCircle(c)
     }
+    //% block="%c=variables_get(myCircleSprite) filled"
+    export function getFilled(c:Sprite): boolean {
+        return sprites.readDataBoolean(c,"filled" )
+    }
     //% block="%c=variables_get(myCircleSprite) color"
     export function getColor(c:Sprite): number {
         return sprites.readDataNumber(c, "color")
