@@ -8,7 +8,7 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "circle/help.md"
+        "circle/circleHelp.md"
     ],
     "testFiles": [
         "test.ts"
