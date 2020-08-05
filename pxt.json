@@ -7,9 +7,8 @@
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md",
-        "circle/circleHelp.md"
-    ],
+        "README.md"
+     ],
     "testFiles": [
         "test.ts"
     ],
