@@ -68,7 +68,7 @@ namespace circle{
         return sprites.readDataNumber(c, "radius")
     }
     // https://github.com/WeCodeMakeCode/circle-ext-with-data-ext/blob/master/README.md
-    //% help=Create
+    //% help=#Create
     //% blockSetVariable=myCircleSprite
     //% block="create circle of radius %radius color %color || filled %fillColor"
     //% radius.min=5 radius.max=60 radius.defl=30
