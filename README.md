@@ -3,6 +3,10 @@
 
 > Open this page at [https://wecodemakecode.github.io/circle-ext-with-data-ext/](https://wecodemakecode.github.io/circle-ext-with-data-ext/)
 
+# Help
+## Create Circle
+THis is the help file
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
