@@ -74,7 +74,7 @@ namespace circle{
     //% radius.min=5 radius.max=60 radius.defl=30
     //% color.min=0 color.max=15 color.defl=2
     //% fill.defl=false
-    export function createCircle(radius: number, color: number , filled:boolean = false ): Sprite {
+    export function create(radius: number, color: number , filled:boolean = false ): Sprite {
         let circleImage = image.create(2 * radius + 2, 2 * radius  + 2);   
         let centerX = radius + 1
         let centerY = radius + 1
