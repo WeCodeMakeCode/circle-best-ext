@@ -5,9 +5,10 @@
 
 
 # Create
-This is the help file
+stuff to help
 
 # Other Help File
+and more stuff
 
 ## Use as Extension
 
