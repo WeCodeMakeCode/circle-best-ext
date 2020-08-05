@@ -3,9 +3,11 @@
 
 > Open this page at [https://wecodemakecode.github.io/circle-ext-with-data-ext/](https://wecodemakecode.github.io/circle-ext-with-data-ext/)
 
-# Help
-## Create Circle
-THis is the help file
+## Help
+### Create Circle
+This is the help file
+
+### Other Help File
 
 ## Use as Extension
 
