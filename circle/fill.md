@@ -1,5 +1,5 @@
-# circle/fill
-## Fill circle
+# Create Circle
+
 ```sig
-circle.fill(c: Circle)
+let myCircle = circle.createCircle(30,10)
 ```

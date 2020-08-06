@@ -1,5 +1,5 @@
-# circle/color-index-picker
-## Color Index picker
+# circle/unfill
+## unfill
 ```sig
-circle.colorIndexPicker(2)
+circle.unfill(c: circle)
 ```
