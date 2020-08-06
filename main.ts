@@ -1,3 +1,14 @@
+
+/**
+ * This file contains both circle extension and sprite data extension revised
+ * Circle extension creates a sprite with data for color, radius and fill/unfilled state
+ * Circle extension also provides the colorIndexPicker for use in any block where a color is require
+ * Circle extension also provides a random color generator with the ability to exclude up to 3 colors
+ * The changes to Sprite Data Extnesion are:
+ *      "mySprite" instead oh "item," 
+ *      an image specification that allows any kind of image, 
+ *      and a couple of corrections in the comments
+ */
 //% weight=100 color=#008080 
 namespace circle{
     /**
@@ -11,7 +22,7 @@ namespace circle{
         return color
     }
     /**
-     * returns a random color excluding up to 3 colors
+     * returns a random color 0-15 excluding up to 3 colors
      */
     //% blockId=randomColor
     //% block=" random color excluding %n colors: || %c1 %c2 %c3"
