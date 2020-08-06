@@ -1,5 +1,5 @@
 # Get Radius
 
-```blocks
+```sig
 circle.getRadius()
 ```
