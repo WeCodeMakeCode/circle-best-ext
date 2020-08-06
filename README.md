@@ -1,11 +1,4 @@
 
-
-## Create
-stuff to help
-
-## Other Help File
-and more stuff
-
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.

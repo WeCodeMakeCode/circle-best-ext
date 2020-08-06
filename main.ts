@@ -67,14 +67,17 @@ namespace circle{
     export function getRadius(c: Sprite): number {
         return sprites.readDataNumber(c, "radius")
     }
-    // https://github.com/WeCodeMakeCode/circle-ext-with-data-ext/blob/master/README.md
-    //% help=Create
+    /**
+     * 
+     */
+    //% blockId=creaeCircle
     //% blockSetVariable=myCircleSprite
     //% block="create circle of radius %radius color %color || filled %fillColor"
     //% radius.min=5 radius.max=60 radius.defl=30
     //% color.min=0 color.max=15 color.defl=2
     //% fill.defl=false
-    export function create(radius: number, color: number , filled:boolean = false ): Sprite {
+    //% help=circle/create-circle
+    export function createCircle(radius: number, color: number , filled:boolean = false ): Sprite {
         let circleImage = image.create(2 * radius + 2, 2 * radius  + 2);   
         let centerX = radius + 1
         let centerY = radius + 1
@@ -87,6 +90,9 @@ namespace circle{
         makeCircle(c)
         return c
     }
+    /**
+     * Draws a circle in a sprite using info from sprite data
+     */
     function makeCircle(c:Sprite){
         let radius: number = sprites.readDataNumber(c,"radius")
         let color: number = sprites.readDataNumber(c,"color")
@@ -247,23 +253,3 @@ namespace sprites {
         return d[name] as Image;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
