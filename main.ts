@@ -63,12 +63,17 @@ namespace circle{
         sprites.setDataNumber(c, "color", color % 16)
         makeCircle(c)
     }
+    /**
+     * Returns the radius of the circle argument
+     */
+    //% blockId=getRadius
     //% block="%c=variables_get(myCircleSprite) radius"
+    //% help=circle/get-radius
     export function getRadius(c: Sprite): number {
         return sprites.readDataNumber(c, "radius")
     }
     /**
-     * 
+     * Create a circle object
      */
     //% blockId=creaeCircle
     //% blockSetVariable=myCircleSprite

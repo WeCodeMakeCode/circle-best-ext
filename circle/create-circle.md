@@ -1,5 +1,5 @@
 # Create Circle
 
 ```blocks
-circle.createCircle(30,10,0)
+circle.createCircle(30,10)
 ```
