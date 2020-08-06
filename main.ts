@@ -1,16 +1,26 @@
 //% weight=100 color=#008080 
 namespace circle{
+    /**
+     * Returns selected color
+     */
+    //% blockId=colorIndexPicker
     //% block="color %color"
     //% color.shadow="colorindexpicker"
+    //% help=circle/color-index-picker
     export function colorIndexPicker(color:number){
         return color
     }
+    /**
+     * returns a random color excluding up to 3 colors
+     */
+    //% blockId=randomColor
     //% block=" random color excluding %n colors: || %c1 %c2 %c3"
     //% inlineInputMode=inline
     //% n.min=0 n.max=3 n.defl=2
     //% c1.min=0 c1.max=15 c1.defl=0
     //% c2.min=0 c2.max=15 c2.defl=15
     //% c3.min=0 c3.max=15 c3.defl=0
+    //% help=circle/random-color
     export function randomColor(n:number = 2, c1:number = 0, c2: number = 15, c3:number = 0): number{
         switch(n) { 
             case 0: {    
@@ -39,32 +49,57 @@ namespace circle{
         }
         return clr
     }
+    /**
+     * Erases fill from circle
+     */
+    //% blockId=unfill
     //% block="erase fill from %c=variables_get(myCircleSprite)"
+    //% help=circle/unfill
     export function unfill(c: Sprite) {
         sprites.setDataBoolean(c, "filled", false)
         makeCircle(c)
     }
+    /**
+     * Fills a circle with the previously set color
+     */
+    //% blockId=fill
     //% block="fill %c=variables_get(myCircleSprite)"
+    //% help=circle/fill
     export function fill(c: Sprite){
         sprites.setDataBoolean(c, "filled", true)
         makeCircle(c)
     }
+    /**
+     * Returns true if circle filled, false otherwise
+     */
+    //% blockId=getFilled
     //% block="%c=variables_get(myCircleSprite) filled"
+    //% help=circle/get-filled
     export function getFilled(c:Sprite): boolean {
         return sprites.readDataBoolean(c,"filled" )
     }
+    /**
+     * Returns the color of a circle
+     */
+    //% blockId=getColor
     //% block="%c=variables_get(myCircleSprite) color"
+    //% help=circle/get-color
     export function getColor(c:Sprite): number {
         return sprites.readDataNumber(c, "color")
     }
+    /**
+     * Set the color of a circle
+     */
+    //% blockId=setColor
     //% block="set %c=variables_get(myCircleSprite) color to %color"
     //% color.min=0 color.max=15 color.defl=2
+    //% help=circle/set-color
     export function setColor(c: Sprite, color: number) {
         sprites.setDataNumber(c, "color", color % 16)
         makeCircle(c)
     }
     /**
-     * Returns the radius of the circle argument
+     * Return the radius of a circle
      */
     //% blockId=getRadius
     //% block="%c=variables_get(myCircleSprite) radius"
@@ -73,7 +108,7 @@ namespace circle{
         return sprites.readDataNumber(c, "radius")
     }
     /**
-     * Create a circle object
+     * Create and returns a circle object
      */
     //% blockId=creaeCircle
     //% blockSetVariable=myCircleSprite

@@ -1,5 +1,5 @@
 # Create Circle
 
 ```sig
-circle.createCircle(30,10)
+let myCircle = circle.createCircle(30,10)
 ```

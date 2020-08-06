@@ -9,7 +9,14 @@
         "main.ts",
         "README.md",
         "circle/create-circle.md",
-        "circle/get-radius.md"
+        "circle/get-radius.md",
+        "circle/set-color.md",
+        "circle/get-color.md",
+        "circle/get-filled.md",
+        "circle/fill.md",
+        "circle/unfill.md",
+        "circle/random-color.md",
+        "circle/color-index-picker.md"
     ],
     "testFiles": [
         "test.ts"
