@@ -1,7 +1,3 @@
- 
-
-
-> Open this page at [https://wecodemakecode.github.io/circle-ext-with-data-ext/](https://wecodemakecode.github.io/circle-ext-with-data-ext/)
 
 
 ## Create
