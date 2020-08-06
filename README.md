@@ -4,10 +4,10 @@
 > Open this page at [https://wecodemakecode.github.io/circle-ext-with-data-ext/](https://wecodemakecode.github.io/circle-ext-with-data-ext/)
 
 
-# Create
+## Create
 stuff to help
 
-# Other Help File
+## Other Help File
 and more stuff
 
 ## Use as Extension
