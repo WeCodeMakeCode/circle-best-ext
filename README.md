@@ -3,7 +3,7 @@
 This MakeCode Arcade extension provides blocks that create and manipulate circle sprites. It is "Best" in a series of similar extensions dubbed good-better-best. This extension uses (and includes) a revision of Sprite Data Extension from the Arcade dashboard.
 
 ## Custom Blocks in circle-ext-best
-![](circle-ext-best-blocks.png)
+![](circle-ext-best-blocks.png | width=100)
 
 
 
