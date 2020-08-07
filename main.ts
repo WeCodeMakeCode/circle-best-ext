@@ -25,7 +25,7 @@ namespace circle{
      * returns a random color 0-15 excluding up to 3 colors
      */
     //% blockId=randomColor
-    //% block=" random color excluding %n colors: || %c1 %c2 %c3"
+    //% block=" random color || excluding %n colors: %c1 %c2 %c3"
     //% inlineInputMode=inline
     //% n.min=0 n.max=3 n.defl=2
     //% c1.min=0 c1.max=15 c1.defl=0
