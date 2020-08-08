@@ -2,8 +2,7 @@
     "name": "circle ext best",
     "description": "",
     "dependencies": {
-        "device": "*",
-        "sprite data revised": "github:wecodemakecode/sprite-data-revised#007c04b54b5c163ecb3ea1174f4e4dfa9eeff059"
+        "device": "*"
     },
     "files": [
         "main.blocks",
