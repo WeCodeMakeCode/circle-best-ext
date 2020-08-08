@@ -5,6 +5,10 @@ This MakeCode Arcade extension provides blocks that create and manipulate circle
 ## Custom Blocks in circle-ext-best
 ![](circle-ext-best-blocks.png)
 
+```blocks
+myCircle = circle.createCircle(ndx, color)
+```
+
 
 
 
