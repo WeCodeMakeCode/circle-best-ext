@@ -8,7 +8,7 @@ This MakeCode Arcade extension provides blocks that create and manipulate circle
   myCircle = circle.createCircle(ndx, color)
 ```
 ```typescript
-function onStart(){} // I don't exist
+  myCircle = circle.createCircle(ndx, color)
 ```
 
 ![](circle-ext-best-blocks.png)
