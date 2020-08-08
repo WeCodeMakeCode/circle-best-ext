@@ -6,7 +6,7 @@ This MakeCode Arcade extension provides blocks that create and manipulate circle
 ![](circle-ext-best-blocks.png)
 
 ```blocks
-myCircle = circle.createCircle(ndx, color)
+  myCircle = circle.createCircle(ndx, color)
 ```
 
 
