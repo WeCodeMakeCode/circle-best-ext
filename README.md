@@ -1,7 +1,7 @@
 # circle-ext-best
 ## A MakeCode Arcade Extension for Manipulating Circles
 
-This MakeCode Arcade extension provides blocks that create and manipulate circle sprites. It is "Best" in a series of similar extensions dubbed good-better-best. A program using this extension must also install Arcade Sprite Data Extension from the Arcade dashboard. Alternatively, the extension Arcade Sprite Data Extension Revised [Arcade Sprite Data Extension Revised](../../../arcade-sprite-data-revised.md) can be used. 
+This MakeCode Arcade extension provides blocks that create and manipulate circle sprites. It is "Best" in a series of similar extensions dubbed good-better-best. A program using this extension must also install Arcade Sprite Data Extension from the Arcade dashboard. Alternatively, the extension Arcade Sprite Data Extension Revised [Arcade Sprite Data Extension Revised](../../../arcade-sprite-data-revised) can be used. 
 
 ## Custom Blocks in circle-ext-best
 
