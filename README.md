@@ -26,6 +26,11 @@ basic.showNumber(5)
 ```
  ``[let txt = "text"]``
  
+ ### ~tip
+
+#### Tip Title
+[content]
+ 
 #### The line of code below should be typescript -- it is.
 ```typescript
   myCircle = circle.createCircle(ndx, color)
