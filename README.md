@@ -24,7 +24,8 @@ basic.showNumber(5)
 ```block
 basic.showNumber(5)
 ```
-
+ ``[let txt = "text"]``
+ 
 #### The line of code below should be typescript -- it is.
 ```typescript
   myCircle = circle.createCircle(ndx, color)
