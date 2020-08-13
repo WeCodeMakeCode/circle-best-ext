@@ -2,7 +2,6 @@
     "name": "circle ext best",
     "description": "",
     "dependencies": {
-        neopixel=github:microsoft/pxt-neopixel#v0.6.,
         "device": "*"
     },
     "files": [
