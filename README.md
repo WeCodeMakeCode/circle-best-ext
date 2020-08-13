@@ -21,6 +21,9 @@ This extension is "Best" because unlike circle-ext-better ("Better")and circle-e
 ```blocks
 basic.showNumber(5)
 ```
+```block
+basic.showNumber(5)
+```
 
 #### The line of code below should be typescript -- it is.
 ```typescript
