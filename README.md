@@ -17,6 +17,11 @@ This extension is "Best" because unlike circle-ext-better ("Better")and circle-e
 ```blocks
   myCircle = circle.createCircle(ndx, color)
 ```
+
+```blocks
+basic.showNumber(5)
+```
+
 #### The line of code below should be typescript -- it is.
 ```typescript
   myCircle = circle.createCircle(ndx, color)
