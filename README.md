@@ -32,6 +32,13 @@ basic.showNumber(5)
 [lots of good info]
 
 ### ~
+
+## ~button /writing-docs/tutorials
+
+NEXT: Tutorials
+
+## ~
+
  
 #### The line of code below should be typescript -- it is.
 ```typescript
