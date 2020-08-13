@@ -26,10 +26,12 @@ basic.showNumber(5)
 ```
  ``[let txt = "text"]``
  
- ### ~tip
+### ~hint
 
-#### Tip Title
-[content]
+#### Hint Title
+[lots of good info]
+
+### ~
  
 #### The line of code below should be typescript -- it is.
 ```typescript
