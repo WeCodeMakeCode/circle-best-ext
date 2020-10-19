@@ -27,7 +27,7 @@ namespace circle{
     //% c1.min=0 c1.max=15 c1.defl=0
     //% c2.min=0 c2.max=15 c2.defl=15
     //% c3.min=0 c3.max=15 c3.defl=0
-    //% help=circle/random-color
+    //% help=GitHub:circle/random-color
     export function randomColor(n:number = 2, c1:number = 0, c2: number = 15, c3:number = 0): number{
         switch(n) { 
             case 0: {    
