@@ -3,7 +3,7 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.1.0"
+        "sprite data revised": "github:wecodemakecode/arcade-sprite-data-revised#2013060ba6e038a5b2fe97595d7ee5e44f48bef9"
     },
     "files": [
         "main.blocks",
